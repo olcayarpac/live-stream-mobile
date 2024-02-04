@@ -57,6 +57,7 @@ const StartStreamScreen = () => {
             console.log('Ringing event received');
             // Perform actions specific to 'ringing' event
         } else if (message.event === 'busy') {
+            // TODO: play busy sound
             console.log('Busy event received');
             ws.close();
         }
@@ -65,6 +66,7 @@ const StartStreamScreen = () => {
           ws.close();
       }
       };
+
 
       ws.onerror = (error) => {
         console.error('WebSocket error:', error);
